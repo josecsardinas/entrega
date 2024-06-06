@@ -1,0 +1,309 @@
+/* GENERALES */
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    background-color: #F8D082;
+    font-family: "Nunito", sans-serif;
+    padding-bottom: 20px;
+}
+
+/* MITAD 1 */
+
+#mitad1{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    text-align: center;
+    align-items: center;
+    padding: 0px 10px 0px;
+    height: 250px;
+}
+
+#logo-div{
+    display: grid;
+    grid-template-rows: 1fr;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 25px;
+    filter: drop-shadow(5px 5px 5px rgba(181,27,117,1));
+}
+
+#logo{
+    
+    width: 200px;
+    height: 200px;
+    animation-duration:2000s;
+    animation-name: logo;   
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-delay: 0ms;
+}
+
+#logo1{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+
+@keyframes logo{
+    from{
+        scale: 1;
+    }
+    to{
+        transform: rotate(129600deg);
+    }
+}
+
+#logo-span{
+    font-size: 30px;
+    font-weight: bold;
+    filter: drop-shadow(1px 1px 1px rgba(181,27,117,1));
+}
+
+#texto{
+    padding: 0px 10px 0px;
+    font-size: 105%;
+}
+
+
+
+/* MITAD 2 */
+
+#mitad2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    column-gap: 3%;
+    padding: 0px 10px 0px;
+    margin: 10px 5px;
+}
+
+.cartas{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color:  #b63480;
+    border-radius: 10%;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    scale: 1;
+    box-shadow: 5px 5px 5px #78653f;
+}
+
+.cartas:hover{
+    transition: all 0.5s ease-in-out;
+    scale: 1.1;
+    box-shadow: 8px 8px 8px #262014;
+}
+
+.cards-img{
+    object-fit: cover;
+    width: 160px;
+    height: 160px;
+    border-radius: 8%;
+    margin: auto;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
+
+.enlace-cards{
+    text-shadow: 0px 0px 15px #ffffff;
+    color: #41112d;
+    font-size: 20px;
+}
+
+#cards-span{
+    font-weight: 700;
+    background-color: #b63480;
+    width: 200px;
+    height: 30px;
+    position: absolute;
+    top: 44%;
+    right: 0%;
+    align-items: center;
+    padding-top: 5px;
+}
+
+#contenedor-contenido{
+    background-color: #ffca60;
+    width: 80%;
+    height: 480px;
+    margin: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 10px;
+    padding: 20px;
+    max-width: 900px;
+    border-radius: 20px;
+    
+}
+
+
+@media screen and (width < 820px){
+    #contenedor-contenido{
+        min-height: 750px;
+        margin-bottom: 10px;
+        padding-bottom: 30px;
+    }
+    
+    #mitad1{
+        position: relative;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: 500px;
+        padding: 30px 0px 20px
+    }
+
+    #logo-div{
+        grid-template-rows: 3fr 1fr;
+    }
+    
+
+    #logo{
+        position: relative;
+    }
+
+    #logo1{
+        position: absolute;
+        align-content: center;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    #mitad2{
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .cartas{
+        margin: auto;
+        width: 150px;
+        height: 150px;
+        margin-top: 35px;
+    }
+
+    .cards-img{
+        width: 120px;
+        height: 120px;
+    }
+
+    #cards-span{
+        width: 150px;
+        height: 30px;
+        font-size: 15px;
+        top: 40%;
+    }
+
+    #texto{
+        font-size: 130%;
+        margin: 30px 0px 0px;
+        transition: all;
+    }
+}
+
+@media screen and (width < 700px){
+    #texto{
+        font-size: 125%;
+    }
+}
+
+@media screen and (width < 650px){
+    #texto{
+        font-size: 120%;
+    }
+}
+
+@media screen and (width < 600px){
+    #contenedor-contenido{
+        min-height: 700px;
+        margin-bottom: 10px;
+        padding-bottom: 30px;
+    }
+
+    .cartas{
+        margin: auto;
+        width: 100px;
+        height: 100px;
+        margin-top: 35px;
+    }
+
+    .cards-img{
+        width: 80px;
+        height: 80px;
+    }
+
+    #cards-span{
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+        top: 40%;
+    }
+    
+    #texto{
+        font-size: 115%;
+    }
+}
+
+@media screen and (width < 530px){
+    #texto{
+        font-size: 105%;
+    }
+}
+
+@media screen and (width < 470px){
+    #texto{
+        font-size: 97%;
+    }
+}
+
+@media screen and (width < 420px){
+    #contenedor-contenido{
+        min-height: 700px;
+        margin-bottom: 10px;
+        padding-bottom: 30px;
+    }
+
+    .cartas{
+        margin: auto;
+        width: 80px;
+        height: 80px;
+        margin-top: 35px;
+    }
+
+    .cards-img{
+        width: 64px;
+        height: 64px;
+    }
+
+    #cards-span{
+        width: 80px;
+        height: 30px;
+        font-size: 12px;
+        top: 30%;
+    }
+
+    #texto{
+        font-size: 94%;
+    }
+}
